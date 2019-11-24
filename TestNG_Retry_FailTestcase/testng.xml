@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="E:/snapengage">
+    <test verbose="2" preserve-order="true" name="TestNG_Retry_FailTestcase">
         <classes>
-            <class name="login.SignInTest">
-                <methods><include name="testSuccessfulSignIn"/></methods>
-            </class>
+           <!--  <class name="login.LoginTests">
+                <methods><include name="testSuccessfulLogin"/></methods>
+                <methods><include name="testUnsuccessfulLogin"/></methods>               
+            </class> -->
+             <class name="login.LoginTests"></class>
         </classes>
     </test>
+    
+    <listeners>
+        <listener class-name="base.RetryListener"/>
+  </listeners>
+  
 </suite>
 
